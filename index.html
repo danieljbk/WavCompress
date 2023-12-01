@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WAV Compressor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>WAV Compressor</h1>
+      <p>
+        Select a WAV file and enter a target size to compress your audio file.
+      </p>
+
+      <form id="compressionForm" class="compression-form">
+        <div class="form-group">
+          <label for="fileInput">Select WAV file:</label>
+          <input type="file" id="fileInput" accept="audio/wav" required />
+        </div>
+
+        <div class="form-group">
+          <label for="targetSizeInput">Target size in megabytes (MB):</label>
+          <input
+            type="number"
+            id="targetSizeInput"
+            placeholder="Enter target size"
+            min="0.1"
+            step="0.1"
+            required
+          />
+        </div>
+
+        <button type="submit" id="compressButton" class="btn-compress">
+          Compress
+        </button>
+      </form>
+    </main>
+
+    <script src="wav_compressor.js"></script>
+  </body>
+</html>
